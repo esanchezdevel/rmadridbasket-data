@@ -13,12 +13,22 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class Menus extends BaseEntity {
 
+	private String menu;
+	
 	private String item;
 
 	private String link;
 
 	@Column(name = "item_order")
 	private long itemOrder;
+
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
 	public String getItem() {
 		return item;

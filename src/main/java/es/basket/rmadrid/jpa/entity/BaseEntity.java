@@ -2,6 +2,7 @@ package es.basket.rmadrid.jpa.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +18,7 @@ public class BaseEntity {
 	protected long id;
 	
 	@LastModifiedBy
+	@Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
 	protected Date updated;
 
 	public long getId() {
