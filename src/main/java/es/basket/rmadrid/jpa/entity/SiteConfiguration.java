@@ -3,6 +3,7 @@ package es.basket.rmadrid.jpa.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -14,6 +15,7 @@ public class SiteConfiguration extends BaseEntity {
 	
 	private String name;
 	
+	@Lob
 	private String value;
 
 	public String getName() {
