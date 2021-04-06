@@ -15,6 +15,10 @@ public class SiteConfiguration extends BaseEntity {
 	
 	private String name;
 	
+	/*
+	 * @Lob annotation is for set this field as longtext
+	 * in database
+	 */
 	@Lob
 	private String value;
 
